@@ -39,7 +39,7 @@ A lot of web technology just doesn't care or need that kind of reactivity. It is
 
 But I consider these kinds of real life IoT devices to be a prime example of where that just isn't good enough. When I want to see the volume, I mean the volume it is right now as my eyes are looking at it. I want to see it move as someone grabs the volume knob.
 
-In the real world, my work involves controlling exactly those kinds of devices. Except they have 10000nds of parameters to control, controlled by many people simultaneously, on flaky networks and underpowered hardware.
+In the real world, my work involves controlling exactly those kinds of devices. Except they have 10000nds of parameters to control, controlled by several impatient people simultaneously, on flaky networks and underpowered hardware.
 
 ### current status
 
@@ -61,7 +61,7 @@ No signals, I like my async to be lazy and I haven't played around with those en
 
 ### previous work
 
-It uses a basic Result type and namespace I've made previously. I want my errors to be typed, so I don't want any promise/function/observable to ever throw, instead it should just return a Result so I know what can go wrong and how to display the error correctly.
+It uses a basic `Result` type and namespace I've made previously. I want my errors to be typed, so I don't want any promise/function/observable to ever throw, instead it should just return a Result so I know what can go wrong and how to display the error correctly.
 
 My Result type is also based on my belief that in the real world, I often don't have a single cause of failure, but a list of at least one element.
 And when it comes to parsing data, or other situations where errors may be corrected, a result should also be able to have a list of warnings.
