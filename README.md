@@ -63,7 +63,7 @@ No signals, I like my async to be lazy and I haven't played around with those en
 
 It uses a basic `Result` type and namespace I've made previously. I want my errors to be typed, so I don't want any promise/function/observable to ever throw, instead it should just return a Result so I know what can go wrong and how to display the error correctly.
 
-My Result type is also based on my belief that in the real world, I often don't have a single cause of failure, but a list of at least one element.
+My `Result` type is also based on my belief that in the real world, I often don't have a single cause of failure, but a list of at least one element.
 And when it comes to parsing data, or other situations where errors may be corrected, a result should also be able to have a list of warnings.
 
 It doesn't currently include any convenience mapping functions to deal with those results, but those are easy enough to write.

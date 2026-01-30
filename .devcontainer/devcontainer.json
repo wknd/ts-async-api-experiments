@@ -1,5 +1,5 @@
 {
-  "name": "AI experiments",
+  "name": "async api experiments",
   "dockerComposeFile": "./compose.yml",
   "service": "development",
   "workspaceFolder": "/workspace",
