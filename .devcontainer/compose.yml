@@ -1,0 +1,11 @@
+services:
+  development:
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ../:/workspace:cached
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+    env_file: ./devcontainer.env
+    # network_mode: host

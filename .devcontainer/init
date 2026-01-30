@@ -1,0 +1,6 @@
+#!/bin/sh
+# https://github.com/microsoft/vscode-remote-release/issues/3007#issuecomment-1942968611
+
+
+cd "$(dirname "$0")"
+touch devcontainer.env

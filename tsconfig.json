@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "nodenext",
+
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "./_output/tsc",
+    "rootDir": "./src/"
+  },
+  "include": ["src/**/*"]
+}

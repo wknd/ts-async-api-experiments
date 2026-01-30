@@ -1,0 +1,51 @@
+{
+  "name": "AI experiments",
+  "dockerComposeFile": "./compose.yml",
+  "service": "development",
+  "workspaceFolder": "/workspace",
+  // "runArgs": ["--env-file", ".devcontainer/devcontainer.env"],
+  "containerUser": "dev" /* do not run as root, this avoids issues with "unsafe directories" */,
+  "remoteUser": "dev" /* do not run as root, this avoids issues with "unsafe directories" */,
+  "initializeCommand": [".devcontainer/init"],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "typescript.experimental.useTsgo": true,
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+          }
+        },
+        "search.exclude": {
+          "**/_output": true,
+          "**/_reports": true,
+          "**/.turbo": true,
+          "**/.angular": true
+        },
+        "files.watcherExclude": {
+          "**/_output/**": true,
+          "**/_reports/**": true,
+          "**/node_modules/**": true
+        },
+        "[typescript]": {
+          "editor.tabSize": 2,
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[json]": {
+          "editor.tabSize": 2,
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "wallaby.node": "/usr/bin/node",
+        "cSpell.language": "en,nl"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "streetsidesoftware.code-spell-checker"
+        // "WallabyJs.wallaby-vscode"
+      ]
+    }
+  }
+}
